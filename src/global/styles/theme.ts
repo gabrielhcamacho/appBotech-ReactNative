@@ -1,0 +1,24 @@
+export default{
+    colors:{
+        primary: '#5636d3',
+        secondary: '#377DFF',
+
+        success: '#12A454',
+        success_light: 'rgba(18, 164, 84, 0.5)',
+
+        attention: '#E83F5B',
+        attention_light: 'rgba(232, 63, 91, 0.5)',
+
+        shape: '#FFF',
+        title: '#363F5F',
+        text: '#FFF',
+        background: '#212429',
+        textBlack: '#000'
+    },
+
+    fonts:{
+        regular: 'Montserrat_400Regular',
+        medium: 'Poppins_500Medium',
+        // bold: 'Poppins_700Bold'
+    }
+}
