@@ -17,7 +17,7 @@ import {
 }from './styles'
 
 
-export function Dashboard(){
+export function Welcome(){
     return(
         <Container>
             <Header>

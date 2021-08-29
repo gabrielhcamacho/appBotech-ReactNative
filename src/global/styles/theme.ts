@@ -12,7 +12,9 @@ export default{
         shape: '#FFF',
         title: '#363F5F',
         text: '#FFF',
+        grey: '#979797',
         background: '#212429',
+        backgroundTabBar: '#23272C',
         textBlack: '#000'
     },
 
