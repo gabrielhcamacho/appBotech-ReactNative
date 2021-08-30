@@ -54,6 +54,7 @@ export function AppRoutes(){
                     ))
                 }}
             />
+            
         </Navigator>
     )
 }

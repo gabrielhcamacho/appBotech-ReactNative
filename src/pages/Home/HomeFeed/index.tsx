@@ -1,4 +1,5 @@
 import React from 'react';
+import TopTabNavigator from '../../../routes/TopBarNavigator'
 
 import {
     Container,
@@ -12,10 +13,10 @@ import {
 export function HomeFeed(){
     return(
         <Container>
+            <TopTabNavigator/>
             <Header>
                 <TabView>
-                    <FeedHeader>Feed</FeedHeader>
-                    <ClubsHeader>Clubs</ClubsHeader>
+                    
                 </TabView>
             </Header>
         </Container>
