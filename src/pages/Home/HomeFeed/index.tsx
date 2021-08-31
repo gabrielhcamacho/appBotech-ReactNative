@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FAB } from 'react-native-elements';
-import { FlatList, Modal, StyleSheet, Pressable, View,} from 'react-native'
+import { FlatList, Modal,} from 'react-native'
 
 
 import {
