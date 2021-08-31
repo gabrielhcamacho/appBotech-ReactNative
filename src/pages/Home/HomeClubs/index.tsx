@@ -1,5 +1,6 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
+import { FAB } from 'react-native-elements';
 
 import {ClubCardComponent } from '../../../components/ClubCard'
 
@@ -7,6 +8,7 @@ import {ClubCardComponent } from '../../../components/ClubCard'
 import {Text} from 'react-native'
 import {
     Container,
+    FABWrapper
 } from './styles'
 
 interface Props{
@@ -40,7 +42,12 @@ export function HomeClubs(){
         techCategory="Artificial Intelligence"
         />
         </ScrollView>
-    
+        <FABWrapper>
+            <FAB title="New Club" 
+                color="#5636d3"
+                size="large"
+            />
+        </FABWrapper>
     </Container>
     )
 }

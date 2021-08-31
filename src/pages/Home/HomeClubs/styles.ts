@@ -14,3 +14,6 @@ export const ClubCard = styled.View`
     border: 1px solid rgba(8,8,8,0.5)
 `;
 
+export const FABWrapper = styled.View`
+    margin-bottom: 10px;
+`;
