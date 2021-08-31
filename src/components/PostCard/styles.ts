@@ -25,7 +25,7 @@ export const PostContainer = styled.View`
 export const UserName = styled.Text`
     margin-left: ${RFValue(10)}px;
     color: ${({theme}) => theme.colors.text};
-    font-size: ${RFValue(16)}px;
+    font-size: ${RFValue(18)}px;
     font-weight: 500;
 
 `;
@@ -38,5 +38,5 @@ export const CardHeader = styled.View`
 export const TextContent = styled.Text`
     margin-top: ${RFValue(17)}px;
     color: ${({theme}) => theme.colors.text};
-    font-size: ${RFValue(14)}px;
+    font-size: ${RFValue(16)}px;
 `;
