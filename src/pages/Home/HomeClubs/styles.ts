@@ -32,6 +32,7 @@ export const ModalHeader = styled.View`
     flex-direction: row;
     margin-top: ${RFValue(50)}px;
     justify-content: space-between;
+    height: ${RFValue(55)}px;
     `;
 
 export const CancelButton = styled.TouchableOpacity`
@@ -74,6 +75,7 @@ export const ModalTitle = styled.Text`
     font-weight: 600;
 
     margin-top: ${RFValue(25)}px;
+    margin-bottom: ${RFValue(10)}px;
     text-align: center;
 `;
 
@@ -103,3 +105,57 @@ export const CategoryName = styled.Text`
     font-size: ${RFValue(20)}px;
     font-weight: 500;
 `;
+
+
+export const ClubTitle = styled.Text`
+    color: ${({theme}) => theme.colors.text};
+    font-size: ${RFValue(22)}px;
+    font-weight: 600;
+
+    margin-top: ${RFValue(125)}px;
+    margin-bottom: ${RFValue(10)}px;
+    text-align: center;
+`;
+
+export const NameClubInput = styled.TextInput`
+    color: ${({theme}) => theme.colors.text};
+    font-size: ${RFValue(18)}px;
+
+    padding: ${RFValue(10)}px ${RFValue(30)}px;
+
+    border: 1px solid rgba(136, 136, 136, 0.05);
+    border-radius: ${RFValue(8)}px;
+
+    height: ${RFValue(50)}px;
+    
+    `;
+
+export const ClubDetailsContainer = styled.View`
+    padding-left: ${RFValue(30)}px;
+    padding-right: ${RFValue(30)}px;
+    
+    flex-direction: column;
+
+    width: 100%;
+`;
+
+export const VisibilityTitle = styled.Text`
+    color: ${({theme}) => theme.colors.text};
+    font-size: ${RFValue(22)}px;
+    font-weight: 600;
+
+    margin-top: ${RFValue(20)}px;
+    margin-bottom: ${RFValue(10)}px;
+    text-align: center;
+`;
+
+export const VisibilityContainer = styled.View`
+    padding-left: ${RFValue(0)}px;
+    padding-right: ${RFValue(0)}px;
+    justify-content: center;
+    
+    flex-direction: row;
+
+    width: 100%;
+`;
+

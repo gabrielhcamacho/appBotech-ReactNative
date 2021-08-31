@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollView, Modal } from 'react-native';
+import { ScrollView, Modal, FlatList } from 'react-native';
 import { FAB } from 'react-native-elements';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -18,7 +18,12 @@ import {
     ModalTitle,
     CategoriesContainer,
     Category,
-    CategoryName
+    CategoryName,
+    NameClubInput,
+    ClubTitle,
+    ClubDetailsContainer,
+    VisibilityTitle,
+    VisibilityContainer
 } from './styles'
 
 interface Props {
@@ -82,23 +87,67 @@ export function HomeClubs() {
                         </CancelButton>
                         <CreateButton>
                             <Text>Launch</Text>
-                            <RocketIcon name="rocket-launch"/>
+                            <RocketIcon name="rocket-launch" />
                         </CreateButton>
 
                     </ModalHeader>
 
-                    <ModalTitle>Select Categories</ModalTitle>
+                    <ScrollView alwaysBounceVertical={false} 
+                                bounces={false}
+                                showsVerticalScrollIndicator={false}
+                                >
+                        <ModalTitle>Select Categories</ModalTitle>
 
-                    <CategoriesContainer>
-                        <Category>
-                            <CategoryName>React</CategoryName>
-                        </Category>
-                        <Category>
-                            <CategoryName>Angular</CategoryName>
-                        </Category>
-                        
-                    </CategoriesContainer>
+                        <CategoriesContainer>
+                            <Category>
+                                <CategoryName>Frameworks</CategoryName>
+                            </Category>
+                            <Category>
+                                <CategoryName>Libraries</CategoryName>
+                            </Category>
+                            <Category>
+                                <CategoryName>Programming Languages</CategoryName>
+                            </Category>
+                            <Category>
+                                <CategoryName>Hardware</CategoryName>
+                            </Category>
+                            <Category>
+                                <CategoryName>IA</CategoryName>
+                            </Category>
+                            <Category>
+                                <CategoryName>Logic and Mathematics</CategoryName>
+                            </Category>
+                            <Category>
+                                <CategoryName>Trends and Worldwide</CategoryName>
+                            </Category>
+                            <Category>
+                                <CategoryName>Networking</CategoryName>
+                            </Category>
+                        </CategoriesContainer>
 
+
+                        <ClubDetailsContainer>
+                            <ClubTitle>The name of your new club</ClubTitle>
+                            <NameClubInput
+                                placeholder="'Hello World' Club"
+                                multiline={true}
+                                placeholderTextColor="#979797"
+                            >
+                            </NameClubInput>
+                        </ClubDetailsContainer>
+
+                        <CategoriesContainer>
+                            <VisibilityTitle>Select Visibility</VisibilityTitle>
+                            <VisibilityContainer>
+                                <Category>
+                                    <CategoryName>Public</CategoryName>
+                                </Category>
+                                <Category>
+                                    <CategoryName>Private</CategoryName>
+                                </Category>
+                            </VisibilityContainer>
+                        </CategoriesContainer>
+                    </ScrollView>
                 </ModalContainer>
             </Modal>
 
