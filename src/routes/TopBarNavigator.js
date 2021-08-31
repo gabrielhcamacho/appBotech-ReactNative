@@ -7,19 +7,11 @@ import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs
 import {useSafeAreaInsets} from 'react-native-safe-area-context'
 
 import {HomeClubs} from '../pages/Home/HomeClubs'
+import {HomeFeed} from '../pages/Home/HomeFeed'
 
 function Feed(){
     return(
-        <View
-            style={{
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'center',
-            }}
-        >
-            <Text style={{fontSize: 20, color: theme.colors.textBlack}}
-            >This is the Feed</Text>
-        </View>
+       <HomeFeed/>
     )
 }
 

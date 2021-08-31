@@ -8,7 +8,7 @@ import {useTheme} from 'styled-components'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 
 import {Welcome} from '../pages/Welcome'
-import {HomeFeed} from '../pages/Home/HomeFeed'
+import {HomeFeed} from '../pages/Home/HomeNav'
 import {Profile} from '../pages/Profile'
 
 const {Navigator, Screen} = createBottomTabNavigator();

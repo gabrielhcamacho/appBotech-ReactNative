@@ -1,24 +1,12 @@
-import React from 'react';
-import TopTabNavigator from '../../../routes/TopBarNavigator'
+import React from 'react'
 
-import {
-    Container,
-    Header,
-    TabView,
-    FeedHeader,
-    ClubsHeader,
-
-} from './styles'
+import {Container} from './styles'
+import {PostCard} from '../../../components/PostCard'
 
 export function HomeFeed(){
     return(
         <Container>
-            <TopTabNavigator/>
-            <Header>
-                <TabView>
-                    
-                </TabView>
-            </Header>
+           <PostCard/>
         </Container>
     )
 }

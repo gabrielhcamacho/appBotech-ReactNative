@@ -1,4 +1,5 @@
 import React from 'react';
+import { ScrollView } from 'react-native';
 
 import {ClubCardComponent } from '../../../components/ClubCard'
 
@@ -12,10 +13,33 @@ interface Props{
     titleClub: string;
 }
 
-export function HomeClubs({titleClub}: Props){
+export function HomeClubs(){
     return(
     <Container>
-       <ClubCardComponent titleClub="ReactLife"/>
+        <ScrollView
+        contentContainerStyle={{flexGrow: 1}}
+        showsHorizontalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
+        >
+       <ClubCardComponent 
+        titleClub="React Life"
+        techCategory="React"
+        />
+
+        <ClubCardComponent 
+        titleClub="Freaking AI"
+        techCategory="Artificial Intelligence"
+        />
+         <ClubCardComponent 
+        titleClub="Freaking AI"
+        techCategory="Artificial Intelligence"
+        />
+
+        <ClubCardComponent 
+        titleClub="Freaking AI"
+        techCategory="Artificial Intelligence"
+        />
+        </ScrollView>
     
     </Container>
     )
