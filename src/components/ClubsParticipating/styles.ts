@@ -19,7 +19,7 @@ export const Title = styled.Text`
     font-weight: 600;
 `;
 
-export const ButtonMoreClubs = styled.View`
+export const ButtonMoreClubs = styled.TouchableOpacity`
     background-color: ${({theme}) => theme.colors.secondary};
 
     padding: ${RFValue(10)}px ${RFValue(15)}px;
@@ -34,29 +34,30 @@ export const ClubsWrapper = styled.View`
     flex-direction: row
 `;
 
-export const ClubOne = styled.View`
+export const ClubOne = styled.TouchableOpacity`
     flex-direction: column;
+    margin: ${RFValue(10)}px;
+    align-items: center;
+    flex-wrap: wrap;
 `;
 
 export const ClubICon = styled.Image`
-     width: ${RFValue(60)}px;
+    width: ${RFValue(60)}px;
     height: ${RFValue(60)}px;
 
     margin-right: ${RFValue(5)}px;
-    margin-top: ${RFValue(15)}px;
+    margin-top: ${RFValue(5)}px;
 
     border-radius: 10px;
-    border: 2px solid ${({theme})=> theme.colors.background}
 `;
 
 export const ClubName = styled.Text`
     color: ${({theme})=> theme.colors.text};
+
     font-size: ${RFValue(14)}px;
     font-weight: 400;
+
+    max-width: ${RFValue(90)}px;
+    text-align: center;
+    margin-top: ${RFValue(5)}px;
 `;
-
-export const ClubTwo = styled.View`
-
-`;
-
-export const ClubThree = styled.View``;
