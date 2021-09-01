@@ -21,7 +21,7 @@ export function PostCard(){
                 size="medium"
                 rounded
                 source={{
-                        uri:"https://lh3.googleusercontent.com/ogw/ADea4I5wPl1mVCalVo6deeJE26NGIfDlSYuSFR68lT7K=s83-c-mo"
+                        uri:"https://avatars.githubusercontent.com/u/62415661?v=4"
                         }}
                         />
                 <UserName>Gabriel Camacho</UserName>

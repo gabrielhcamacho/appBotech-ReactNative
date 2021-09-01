@@ -4,7 +4,7 @@ import { AntDesign } from '@expo/vector-icons';
 
 
 export const PaddingContainer = styled.View`
-    padding: ${RFValue(20)}px ${RFValue(30)}px;
+    padding: ${RFValue(20)}px ${RFValue(30)}px ${RFValue(0)}px;
 `;
 
 export const Header = styled.View`

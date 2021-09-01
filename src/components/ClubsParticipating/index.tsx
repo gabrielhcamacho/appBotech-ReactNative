@@ -14,9 +14,6 @@ import {
     ClubsWrapper,
 } from './styles'
 
-//Armazena o nome e o icone do club
-
-
 
 
 export function Club() {

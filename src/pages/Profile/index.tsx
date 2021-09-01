@@ -1,7 +1,8 @@
 import React from 'react';
-import { ScrollView } from 'react-native'
+import { FlatList, ScrollView } from 'react-native'
 import { ClubsParticipating } from '../../components/ClubsParticipating';
 import { PerfilButtonsMenu } from '../../components/PerfilButtonsMenu';
+import { PostCard } from '../../components/PostCard';
 import { Repositories } from '../../components/Repositories';
 
 import {
@@ -24,16 +25,17 @@ import {
 export function Profile() {
     return (
         <Container>
+            <Header>
+                <Photo source={{ uri: 'https://avatars.githubusercontent.com/u/62415661?v=4' }} />
+                <UserHeaderInfo>
+                    <Name>Gabriel Camacho</Name>
+                    <UserName>@thegabrielcamacho</UserName>
+                </UserHeaderInfo>
+            </Header>
             <ScrollView
-            bounces={false}
-            showsVerticalScrollIndicator={false}>
-                <Header>
-                    <Photo source={{ uri:'https://avatars.githubusercontent.com/u/62415661?v=4' }} />
-                    <UserHeaderInfo>
-                        <Name>Gabriel Camacho</Name>
-                        <UserName>@thegabrielcamacho</UserName>
-                    </UserHeaderInfo>
-                </Header>
+                bounces={false}
+                showsVerticalScrollIndicator={false}>
+
 
                 <InfoContainer>
                     <InfoFollowersContainer>
@@ -53,16 +55,22 @@ export function Profile() {
                     </InfoFriendsContainer>
                 </InfoContainer>
 
-            <PerfilButtonsMenu/>
+                <PerfilButtonsMenu />
 
-            <Bio>Software Engineering Student 💻 focusing on front-end,
+                <Bio>Software Engineering Student 💻 focusing on front-end,
                 ReactJS, NodeJS and React Native
             </Bio>
 
-            <Repositories/>
-            
-            <ClubsParticipating/>
+                <Repositories />
+
+                <ClubsParticipating />
+
+
+                <PostCard />
+
             </ScrollView>
+
+
         </Container>
     )
 }

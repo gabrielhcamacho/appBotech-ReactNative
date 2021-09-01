@@ -3,6 +3,7 @@ import {Platform} from 'react-native'
 
 import {Entypo} from '@expo/vector-icons'
 import { AntDesign } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import {useTheme} from 'styled-components'
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
@@ -10,6 +11,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import {Welcome} from '../pages/Welcome'
 import {HomeFeed} from '../pages/Home/HomeNav'
 import {Profile} from '../pages/Profile'
+import {Explore} from '../pages/Explore'
 
 const {Navigator, Screen} = createBottomTabNavigator();
 
@@ -42,6 +44,20 @@ export function AppRoutes(){
                     ))
                 }}
             />
+            
+            <Screen 
+                name="Explore"
+                component={Explore}
+                options={{
+                    tabBarIcon: (({size, color}) => (
+                        <MaterialCommunityIcons name="telescope"
+                            size={size}
+                            color={color}
+                        />
+                    ))
+                }}
+            />
+
             <Screen 
                 name="Profile"
                 component={Profile}
@@ -55,6 +71,7 @@ export function AppRoutes(){
                 }}
             />
             
+
         </Navigator>
     )
 }
