@@ -1,6 +1,7 @@
 import styled from 'styled-components/native';
 import {RFValue} from 'react-native-responsive-fontsize';
 import {Feather} from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 
 
 export const Container = styled.View`
@@ -20,6 +21,8 @@ export const PostContainer = styled.View`
     border-radius: ${RFValue(8)}px;
 
     padding: ${RFValue(20)}px;
+
+    justify-content: space-between;
 `;
 
 export const UserName = styled.Text`
@@ -35,8 +38,33 @@ export const CardHeader = styled.View`
     align-items: center;
 `;
 
+export const CardBody= styled.View`
+    height: 50%;
+`;
+
 export const TextContent = styled.Text`
-    margin-top: ${RFValue(17)}px;
+    margin-top: ${RFValue(10)}px;
     color: ${({theme}) => theme.colors.text};
     font-size: ${RFValue(16)}px;
+`;
+
+export const CardFooter= styled.View`
+    justify-content: space-between;
+    align-items: flex-end;
+
+    flex-direction: row;
+`;
+
+export const LikeButton = styled(AntDesign)`
+    color: ${({theme}) => theme.colors.lightGrey};
+    font-size: ${RFValue(18)}px;
+`;
+export const ShareButton = styled(Feather)`
+    color: ${({theme}) => theme.colors.lightGrey};
+    font-size: ${RFValue(18)}px;
+`;
+
+export const PostDate = styled.Text`
+    color: ${({theme}) => theme.colors.lightGrey};
+    font-size: ${RFValue(12)}px;
 `;
