@@ -13,6 +13,7 @@ export default{
         title: '#363F5F',
         text: '#FFF',
         grey: '#979797',
+        lightGrey: '#D0D0D0',
         background: '#212429',
         backgroundTabBar: '#23272C',
         textBlack: '#000'
