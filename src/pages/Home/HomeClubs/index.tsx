@@ -44,7 +44,7 @@ export function HomeClubs() {
             >
                 <ClubCardComponent
                     titleClub="React Life"
-                    techCategory="React"
+                    techCategory="Framework"
                 />
                 <ClubCardComponent
                     titleClub="Freaking AI"
@@ -129,7 +129,7 @@ export function HomeClubs() {
                         <ClubDetailsContainer>
                             <ClubTitle>The name of your new club</ClubTitle>
                             <NameClubInput
-                                placeholder="'Hello World' Club"
+                                placeholder="It's not bug, it's a feature"
                                 multiline={true}
                                 placeholderTextColor="#979797"
                             >

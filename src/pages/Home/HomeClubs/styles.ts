@@ -121,7 +121,9 @@ export const NameClubInput = styled.TextInput`
     color: ${({theme}) => theme.colors.text};
     font-size: ${RFValue(18)}px;
 
-    padding: ${RFValue(10)}px ${RFValue(30)}px;
+    align-items: center;
+
+    padding: ${RFValue(12)}px ${RFValue(30)}px;
 
     border: 1px solid rgba(136, 136, 136, 0.05);
     border-radius: ${RFValue(8)}px;

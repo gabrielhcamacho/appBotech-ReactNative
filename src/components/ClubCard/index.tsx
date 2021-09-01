@@ -1,12 +1,23 @@
 import React from 'react';
 import { Avatar } from 'react-native-elements';
+import { Ionicons } from '@expo/vector-icons';
 
 import {
     Container,
     ClubCard,
     Title,
     CardHeader,
-    TechCategory
+    TechCategory,
+    CardFooter,
+    Icon,
+    PeopleNumber,
+    LastMessageContainer,
+    LastMessageContainerTwo,
+    PersonName,
+    LastMessage,
+    PeopleOnContainer,
+    Photo
+
 } from './styles'
 
 interface Props{
@@ -29,9 +40,27 @@ export function ClubCardComponent({titleClub, techCategory,}: Props){
                         />
             
             <Title>{titleClub}</Title>
-
             </CardHeader>
-        
+
+            <LastMessageContainer>
+                <PersonName>Gabriel Camacho: </PersonName>
+                <LastMessage>O pai ta on e roteando!</LastMessage>
+            </LastMessageContainer>
+            <LastMessageContainerTwo>
+                <PersonName>Ariel: </PersonName>
+                <LastMessage>Teste</LastMessage>
+            </LastMessageContainerTwo>
+
+            <PeopleOnContainer>
+                <Photo source={{uri: 'https://avatars.githubusercontent.com/u/62415661?s=400&u=9bc9364c7b6e91235e8d735439d7992692036aab&v=4'}}/>
+                <Photo source={{uri: 'https://avatars.githubusercontent.com/u/85971493?v=4'}}/>
+                <Photo source={{uri: 'https://avatars.githubusercontent.com/u/80973488?v=4'}}/>
+            </PeopleOnContainer>
+
+            <CardFooter>
+                <Icon name="people-outline"/>
+                <PeopleNumber> 138 / 2.590</PeopleNumber>
+            </CardFooter>
         </ClubCard>
     </Container>
     )
