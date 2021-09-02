@@ -15,7 +15,7 @@ export const Container = styled.View`
     padding-right: ${RFValue(20)}px;
 `;
 
-export const ClubCard = styled.View`
+export const ClubCard = styled.TouchableOpacity`
     height: ${RFValue(195)}px;
     width: ${RFValue(280)}px;
     border: 1px solid rgba(136, 136, 136, 0.05);

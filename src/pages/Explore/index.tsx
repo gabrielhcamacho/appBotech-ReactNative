@@ -1,12 +1,17 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
 
+import { LinearGradient } from 'expo-linear-gradient';
+
 import {
     Container,
     Header,
     PageTitle,
     SearchBarContainer,
     Icon,
+    IconJS,
+    IconUnreal,
+    IconMath,
     TextInput,
     Body,
     Title,
@@ -16,6 +21,7 @@ import {
     TechTitle,
     TechDescription,
 } from './styles'
+
 
 export function Explore(){
     return(
@@ -39,108 +45,108 @@ export function Explore(){
                     <Row>
                         <TechContainer>
                             <TechHeader>
-                                <Icon/>
-                                <TechTitle></TechTitle>
+                                <Icon name="python"/>
+                                <TechTitle>Python</TechTitle>
                             </TechHeader>
-                            <TechDescription></TechDescription>
+                            <TechDescription>Python is used in virtually every industry and scientific field that you can imagine</TechDescription>
                         </TechContainer>
 
                         <TechContainer>
                             <TechHeader>
-                                <Icon/>
-                                <TechTitle></TechTitle>
+                                <Icon name="raspberry-pi"/>
+                                <TechTitle>Raspberry Pi</TechTitle>
                             </TechHeader>
-                            <TechDescription></TechDescription>
+                            <TechDescription>The Raspberry Pi 4 is the ideal “brain” for a multitude of DIY projects</TechDescription>
                         </TechContainer>
                     </Row>
 
                     <Row>
                         <TechContainer>
                             <TechHeader>
-                                <Icon/>
-                                <TechTitle></TechTitle>
+                                <Icon name="java"/>
+                                <TechTitle>Java</TechTitle>
                             </TechHeader>
-                            <TechDescription></TechDescription>
+                            <TechDescription>Java is used for back-end projects, including big data and Android development</TechDescription>
                         </TechContainer>
 
                         <TechContainer>
                             <TechHeader>
-                                <Icon/>
-                                <TechTitle></TechTitle>
+                                <IconJS name="logo-javascript"/>
+                                <TechTitle>JavaScript</TechTitle>
                             </TechHeader>
-                            <TechDescription></TechDescription>
+                            <TechDescription>JS it’s used for Web, Mobile Applications, Desktop Applications and Web Games</TechDescription>
                         </TechContainer>
                     </Row>
 
                     <Row>
                         <TechContainer>
                             <TechHeader>
-                                <Icon/>
-                                <TechTitle></TechTitle>
+                                <Icon name="php"/>
+                                <TechTitle>PHP</TechTitle>
                             </TechHeader>
-                            <TechDescription></TechDescription>
+                            <TechDescription>PHP is a server side scripting language. It's used to manage dynamic content</TechDescription>
                         </TechContainer>
 
                         <TechContainer>
                             <TechHeader>
-                                <Icon/>
-                                <TechTitle></TechTitle>
+                                <Icon name="swift"/>
+                                <TechTitle>Swift</TechTitle>
                             </TechHeader>
-                            <TechDescription></TechDescription>
+                            <TechDescription>Swift is a powerful and intuitive programming language for macOS, iOS, watchOS, tvOS and beyond</TechDescription>
                         </TechContainer>
                     </Row>
 
                     <Row>
                         <TechContainer>
                             <TechHeader>
-                                <Icon/>
-                                <TechTitle></TechTitle>
+                                <Icon name="react"/>
+                                <TechTitle>React</TechTitle>
                             </TechHeader>
-                            <TechDescription></TechDescription>
+                            <TechDescription>React is a JavaScript library for building user interfaces or UI components</TechDescription>
                         </TechContainer>
 
                         <TechContainer>
                             <TechHeader>
-                                <Icon/>
-                                <TechTitle></TechTitle>
+                                <Icon name="angular"/>
+                                <TechTitle>Angular</TechTitle>
                             </TechHeader>
-                            <TechDescription></TechDescription>
+                            <TechDescription>Angular is framework for building single-page client applications using HTML and TypeScript</TechDescription>
                         </TechContainer>
                     </Row>
 
                     <Row>
                         <TechContainer>
                             <TechHeader>
-                                <Icon/>
-                                <TechTitle></TechTitle>
+                                <Icon name="vuejs"/>
+                                <TechTitle>VueJS</TechTitle>
                             </TechHeader>
-                            <TechDescription></TechDescription>
+                            <TechDescription>VueJS is an open source progressive JavaScript framework used to develop interactive web interfaces</TechDescription>
                         </TechContainer>
 
                         <TechContainer>
                             <TechHeader>
-                                <Icon/>
-                                <TechTitle></TechTitle>
+                                <Icon name="unity"/>
+                                <TechTitle>Unity</TechTitle>
                             </TechHeader>
-                            <TechDescription></TechDescription>
+                            <TechDescription>Unity3D is a powerful cross-platform 3D engine and a user friendly development environment</TechDescription>
                         </TechContainer>
                     </Row>
-                    
+
                     <Row>
                         <TechContainer>
                             <TechHeader>
-                                <Icon/>
-                                <TechTitle></TechTitle>
+                                <IconUnreal name="unreal-engine"/>
+                                <TechTitle>Unreal Engine</TechTitle>
                             </TechHeader>
-                            <TechDescription></TechDescription>
+                            <TechDescription>Is a complete suite of development tools for working with real-time technology</TechDescription>
                         </TechContainer>
 
                         <TechContainer>
                             <TechHeader>
-                                <Icon/>
-                                <TechTitle></TechTitle>
+                                <IconMath name="math-compass"/>
+                                <TechTitle>Math</TechTitle>
                             </TechHeader>
-                            <TechDescription></TechDescription>
+                            <TechDescription>Algebra, arithmetic, calculus, geometry, and so on</TechDescription>
                         </TechContainer>
                     </Row>
 

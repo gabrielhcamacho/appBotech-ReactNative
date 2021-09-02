@@ -26,16 +26,16 @@ export const ModalHeader = styled.View`
     `;
 
 export const CancelButton = styled.TouchableOpacity`
-    height: 50px;
-    width: 30%;
+    height: 45px;
+    width: 25%;
     align-items: center;
     justify-content: center;
     border-radius: ${RFValue(10)}px;
     `;
 
 export const SendButton = styled.TouchableOpacity`
-    height: 50px;
-    width: 30%;
+    height: 45px;
+    width: 25%;
     background-color: ${({theme}) => theme.colors.secondary};
     align-items: center;
     justify-content: center;
@@ -56,5 +56,5 @@ export const ContentInput = styled.TextInput`
 
 export const Text = styled.Text`
     color: ${({theme}) => theme.colors.text};
-    font-size: ${RFValue(20)}px;
+    font-size: ${RFValue(18)}px;
 `;

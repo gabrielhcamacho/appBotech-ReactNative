@@ -22,7 +22,7 @@ export const Title = styled.Text`
 export const ButtonMoreClubs = styled.TouchableOpacity`
     background-color: ${({theme}) => theme.colors.secondary};
 
-    padding: ${RFValue(10)}px ${RFValue(15)}px;
+    padding: ${RFValue(8)}px ${RFValue(10)}px;
     border-radius: ${RFValue(8)}px;
 `;
 

@@ -32,6 +32,7 @@ interface Props {
 
 export function HomeClubs() {
 
+    
     const [modalVisible, setModalVisible] = useState(false);
 
     return (

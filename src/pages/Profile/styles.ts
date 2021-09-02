@@ -7,7 +7,7 @@ export const Container = styled.View`
 `;
 
 export const Header = styled.View`
-    background-color: ${({ theme}) => theme.colors.secondary};
+    background-color: ${({ theme}) => theme.colors.backgroundTabBar};
     padding: ${RFValue(25)}px;
 
     width: 100%;
@@ -44,13 +44,13 @@ export const UserHeaderInfo = styled.View`
 `;
 
 export const Name= styled.Text`
-    color: ${({theme})=> theme.colors.textBlack};
+    color: ${({theme})=> theme.colors.lightGrey};
     font-size: ${RFValue(20)}px;
     font-weight: 500;
 `;
 
 export const UserName= styled.Text`
-    color: ${({theme})=> theme.colors.textBlack};
+    color: ${({theme})=> theme.colors.lightGrey};
     font-size: ${RFValue(13)}px;
     font-weight: 400;
 `;
@@ -95,7 +95,8 @@ export const InfoName = styled.Text`
 
 export const Bio = styled.Text`
     color: ${({theme})=> theme.colors.text};
-    font-size: ${RFValue(16)}px;
+    font-size: ${RFValue(17)}px;
 
     padding: ${RFValue(15)}px ${RFValue(25)}px;
+    margin-top: ${RFValue(10)}px;
 `;

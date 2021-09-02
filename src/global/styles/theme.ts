@@ -15,6 +15,7 @@ export default{
         grey: '#979797',
         lightGrey: '#D0D0D0',
         background: '#212429',
+        card: '#2D2F33',
         backgroundTabBar: '#23272C',
         textBlack: '#000'
     },

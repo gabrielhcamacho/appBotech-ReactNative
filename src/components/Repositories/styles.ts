@@ -21,7 +21,7 @@ export const RepositoriesTypeContainer = styled.View`
 `;
 
 export const Icon = styled(FontAwesome)`
-    color: ${({theme})=> theme.colors.secondary};
+    color: ${({theme})=> theme.colors.lightGrey};
     font-size: ${RFValue(40)}px;
 
     margin-top: ${RFValue(10)}px;

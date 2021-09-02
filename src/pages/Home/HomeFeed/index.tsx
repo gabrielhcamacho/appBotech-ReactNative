@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FAB } from 'react-native-elements';
-import { FlatList, Modal,} from 'react-native'
+import { FlatList, Modal, StyleSheet } from 'react-native'
+
 
 
 import {
@@ -25,7 +26,10 @@ export function HomeFeed() {
         {}, {}, {}
     ]
 
+
     return (
+
+        
         <Container>
             <FlatList
                 data={Posts}
@@ -36,12 +40,14 @@ export function HomeFeed() {
                 }}
             />
             <FABWrapper>
-                <FAB
-                    title="New Post"
-                    color="#5636d3"
-                    size="large"
-                    onPress={() => setModalVisible(!modalVisible)}
-                />
+                
+                    <FAB
+                        title="New Post"
+                        color="#5636d3"
+                        size="large"
+                        onPress={() => setModalVisible(!modalVisible)}
+                    />
+                
             </FABWrapper>
 
             <Modal
@@ -51,7 +57,7 @@ export function HomeFeed() {
                     setModalVisible(!modalVisible);
                 }}
                 presentationStyle="fullScreen"
-                
+
             >
                 <ModalContainer>
                     <ModalHeader>
@@ -64,8 +70,8 @@ export function HomeFeed() {
                         </SendButton>
 
                     </ModalHeader>
-                    <ContentInput  
-                        placeholder="What's going on dev?" 
+                    <ContentInput
+                        placeholder="What's going on dev?"
                         multiline={true}
                         placeholderTextColor="#979797"
                     >
@@ -77,3 +83,7 @@ export function HomeFeed() {
     )
 }
 
+const styles = StyleSheet.create({
+    linearGradient: {
+      flex: 1,
+    }})
