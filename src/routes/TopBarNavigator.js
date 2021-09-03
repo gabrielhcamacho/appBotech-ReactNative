@@ -32,11 +32,11 @@ function MyTabs(){
 
         <Tab.Navigator
             initialRouteNAme="Feed"
-            tabBarOptions={{
-                activeTintColor: theme.colors.secondary,
-                inactiveTintColor: theme.colors.grey,
-                labelStyle: {fontSize:16, fontWeight: 'bold'},
-                style: {marginTop: insets.top,  backgroundColor: theme.colors.background},
+            screenOptions={{
+                tabBarActiveTintColor: theme.colors.secondary,
+                tabBarInactiveTintColor: theme.colors.grey,
+                tabBarLabelStyle: {fontSize:16, fontWeight: 'bold'},
+                tabBarStyle: {marginTop: insets.top,  backgroundColor: theme.colors.background},
                 
             }}
         >

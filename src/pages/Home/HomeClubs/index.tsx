@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { ScrollView, Modal, FlatList } from 'react-native';
+import { ScrollView, Modal, FlatList, StyleSheet, TouchableOpacityProps } from 'react-native';
 import { FAB } from 'react-native-elements';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { ClubCardComponent } from '../../../components/ClubCard'
+
+import { NavigationContainer } from '@react-navigation/native';
 
 
 import {
@@ -26,11 +28,16 @@ import {
     VisibilityContainer
 } from './styles'
 
+
 interface Props {
     titleClub: string;
 }
 
-export function HomeClubs() {
+interface PropsCategoryButton extends TouchableOpacityProps{
+    isActive: boolean;
+}
+
+export function HomeClubs({isActive}: PropsCategoryButton) {
 
     
     const [modalVisible, setModalVisible] = useState(false);
@@ -61,16 +68,15 @@ export function HomeClubs() {
                 />
             </ScrollView>
 
+            <FABWrapper>            
 
-            <FABWrapper>
                 <FAB title="New Club"
                     color="#5636d3"
                     size="large"
                     onPress={() => setModalVisible(!modalVisible)}
                 />
             </FABWrapper>
-
-
+            
             <Modal
                 animationType="slide"
                 visible={modalVisible}
@@ -100,34 +106,35 @@ export function HomeClubs() {
                         <ModalTitle>Select Categories</ModalTitle>
 
                         <CategoriesContainer>
-                            <Category>
+                            <Category isActive={isActive}>
                                 <CategoryName>Frameworks</CategoryName>
                             </Category>
-                            <Category>
+                            <Category isActive={isActive}>
                                 <CategoryName>Libraries</CategoryName>
                             </Category>
-                            <Category>
+                            <Category isActive={isActive}>
                                 <CategoryName>Programming Languages</CategoryName>
                             </Category>
-                            <Category>
+                            <Category isActive={isActive}>
                                 <CategoryName>Hardware</CategoryName>
                             </Category>
-                            <Category>
+                            <Category isActive={isActive}>
                                 <CategoryName>IA</CategoryName>
                             </Category>
-                            <Category>
+                            <Category isActive={isActive}>
                                 <CategoryName>Logic and Mathematics</CategoryName>
                             </Category>
-                            <Category>
+                            <Category isActive={isActive}>
                                 <CategoryName>Trends and Worldwide</CategoryName>
                             </Category>
-                            <Category>
+                            <Category isActive={isActive}>
                                 <CategoryName>Networking</CategoryName>
                             </Category>
                         </CategoriesContainer>
 
 
                         <ClubDetailsContainer>
+
                             <ClubTitle>The name of your new club</ClubTitle>
                             <NameClubInput
                                 placeholder="It's not bug, it's a feature"
@@ -140,10 +147,10 @@ export function HomeClubs() {
                         <CategoriesContainer>
                             <VisibilityTitle>Select Visibility</VisibilityTitle>
                             <VisibilityContainer>
-                                <Category>
+                                <Category isActive={isActive}>
                                     <CategoryName>Public</CategoryName>
                                 </Category>
-                                <Category>
+                                <Category isActive={isActive}>
                                     <CategoryName>Private</CategoryName>
                                 </Category>
                             </VisibilityContainer>

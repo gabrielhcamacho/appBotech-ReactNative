@@ -13,6 +13,7 @@ export const Container = styled.View`
     padding-top: ${RFValue(25)}px;
     padding-left: ${RFValue(20)}px;
     padding-right: ${RFValue(20)}px;
+
 `;
 
 export const ClubCard = styled.TouchableOpacity`

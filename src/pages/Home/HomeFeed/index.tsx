@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FAB } from 'react-native-elements';
 import { FlatList, Modal, StyleSheet } from 'react-native'
+import { BlurView } from 'expo-blur';
 
 
 
@@ -39,6 +40,7 @@ export function HomeFeed() {
                     )
                 }}
             />
+            
             <FABWrapper>
                 
                     <FAB
@@ -84,6 +86,8 @@ export function HomeFeed() {
 }
 
 const styles = StyleSheet.create({
-    linearGradient: {
-      flex: 1,
+    blurContainer: {
+        flex: 1,
+        padding: 20,
+        justifyContent: 'center',
     }})

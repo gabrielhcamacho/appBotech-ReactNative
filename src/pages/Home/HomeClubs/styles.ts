@@ -1,6 +1,8 @@
-import styled from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
 import {RFValue} from 'react-native-responsive-fontsize';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { BlurView } from '@react-native-community/blur';
+import { TouchableOpacity } from 'react-native';
 
 export const Container = styled.View`
     flex: 1;
@@ -17,6 +19,7 @@ export const ClubCard = styled.View`
 
 export const FABWrapper = styled.View`
     margin-bottom: 10px;
+    
 `;
 
 /* MODAL */
@@ -90,7 +93,11 @@ export const CategoriesContainer = styled.View`
 
 `;
 
-export const Category = styled.TouchableOpacity`
+interface ContainerProps{
+    isActive: boolean;
+}
+
+export const Category = styled(TouchableOpacity)<ContainerProps>`
     background-color: ${({theme}) => theme.colors.primary};
     border-radius: ${RFValue(8)}px;
     align-self: flex-start;
@@ -98,6 +105,11 @@ export const Category = styled.TouchableOpacity`
     padding: ${RFValue(8)}px ${RFValue(20)}px;
 
     margin: ${RFValue(5)}px;
+
+    ${({isActive}) => isActive && css`
+        background-color: ${({ theme})=>theme.colors.attention_light};
+        border: none;
+    `}
 `;
 
 export const CategoryName = styled.Text`
