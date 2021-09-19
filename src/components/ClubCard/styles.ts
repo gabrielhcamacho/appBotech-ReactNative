@@ -2,8 +2,9 @@ import styled from 'styled-components/native';
 import {RFValue} from 'react-native-responsive-fontsize';
 import theme from '../../global/styles/theme';
 import { Ionicons } from '@expo/vector-icons';
+import { RectButton } from 'react-native-gesture-handler';
 
-export const Container = styled.View`
+export const Container = styled(RectButton)`
     flex: 1;
     flex-direction: column;
     align-items: center;
@@ -83,7 +84,7 @@ export const Photo = styled.Image`
     margin-right: ${RFValue(5)}px;
 
     border-radius: 10px;
-    border: 2px solid ${({theme})=> theme.colors.secondary}
+    border: 2px solid ${({theme})=> theme.colors.secondary};
 `;
 
 export const CardFooter = styled.View`

@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components/native';
 import {RFValue} from 'react-native-responsive-fontsize';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { BlurView } from '@react-native-community/blur';
 import { TouchableOpacity } from 'react-native';
 
 export const Container = styled.View`

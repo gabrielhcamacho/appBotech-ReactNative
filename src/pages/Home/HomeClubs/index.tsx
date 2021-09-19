@@ -4,8 +4,11 @@ import { FAB } from 'react-native-elements';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { ClubCardComponent } from '../../../components/ClubCard'
+import {ClubInside} from '../../ClubInside'
 
 import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 
 import {
@@ -36,6 +39,7 @@ interface Props {
 interface PropsCategoryButton extends TouchableOpacityProps{
     isActive: boolean;
 }
+
 
 export function HomeClubs({isActive}: PropsCategoryButton) {
 
@@ -69,7 +73,6 @@ export function HomeClubs({isActive}: PropsCategoryButton) {
             </ScrollView>
 
             <FABWrapper>            
-
                 <FAB title="New Club"
                     color="#5636d3"
                     size="large"

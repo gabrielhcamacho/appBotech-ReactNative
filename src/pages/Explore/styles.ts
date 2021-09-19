@@ -96,7 +96,7 @@ export const Row = styled.View`
     height: ${RFValue(120)}px;
 `;
 
-export const TechContainer = styled.View`
+export const TechContainer = styled.TouchableOpacity`
     margin-top: ${RFValue(15)}px;
     
     padding: ${RFValue(10)}px;

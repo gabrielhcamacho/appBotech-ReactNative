@@ -5,6 +5,7 @@ import {Entypo} from '@expo/vector-icons'
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import {useTheme} from 'styled-components'
+import { Ionicons } from '@expo/vector-icons';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 
@@ -12,6 +13,7 @@ import {Welcome} from '../pages/Welcome'
 import {HomeFeed} from '../pages/Home/HomeNav'
 import {Profile} from '../pages/Profile'
 import {Explore} from '../pages/Explore'
+import {ClubInside} from '../pages/ClubInside'
 
 const {Navigator, Screen} = createBottomTabNavigator();
 
@@ -51,6 +53,19 @@ export function AppRoutes(){
                 options={{
                     tabBarIcon: (({size, color}) => (
                         <MaterialCommunityIcons name="telescope"
+                            size={size}
+                            color={color}
+                        />
+                    ))
+                }}
+            />
+
+            <Screen 
+                name="Club"
+                component={ClubInside}
+                options={{
+                    tabBarIcon: (({size, color}) => (
+                        <Ionicons name="ios-beer"
                             size={size}
                             color={color}
                         />

@@ -19,16 +19,21 @@ import {
     Photo
 
 } from './styles'
+import { useNavigation } from '@react-navigation/native';
+import { RectButtonProps } from 'react-native-gesture-handler';
 
-interface Props{
+interface Props extends RectButtonProps{
     titleClub: string;
     techCategory: string;
     // AvatarURL: string;
 }
 
-export function ClubCardComponent({titleClub, techCategory,}: Props){
+
+export function ClubCardComponent({titleClub, techCategory, ...rest}: Props){
+
+
     return(
-    <Container>
+    <Container {...rest}>
         <ClubCard>
             <TechCategory>{techCategory}</TechCategory>
             <CardHeader>
