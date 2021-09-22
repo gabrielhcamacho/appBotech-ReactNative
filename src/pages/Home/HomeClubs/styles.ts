@@ -88,7 +88,6 @@ export const CategoriesContainer = styled.View`
     flex-direction: column;
 
     width: 100%;
-    height: 400px;
 
 `;
 
@@ -146,7 +145,8 @@ export const NameClubInput = styled.TextInput`
 export const ClubDetailsContainer = styled.View`
     padding-left: ${RFValue(30)}px;
     padding-right: ${RFValue(30)}px;
-    
+    margin-top: 0px;
+
     flex-direction: column;
 
     width: 100%;
@@ -172,3 +172,16 @@ export const VisibilityContainer = styled.View`
     width: 100%;
 `;
 
+export const PickerContainer = styled.View`
+    align-items:center;
+    justify-content: center;
+    background-color: ${({theme}) => theme.colors.backgroundTabBar};
+    border-radius: ${RFValue(10)}px;
+
+    margin-left: ${RFValue(70)}px;
+    margin-top: ${RFValue(10)}px;
+    margin-bottom: 0px;
+
+    height: 120px;
+    width: 200px;
+`;
