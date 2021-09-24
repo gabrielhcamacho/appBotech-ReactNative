@@ -2,13 +2,9 @@ import React, { useState } from 'react';
 import { ScrollView, Modal, FlatList, StyleSheet, TouchableOpacityProps } from 'react-native';
 import { Picker } from '@react-native-community/picker';
 import { FAB } from 'react-native-elements';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+
 
 import { ClubCardComponent } from '../../../components/ClubCard'
-import { ClubInside } from '../../ClubInside'
-
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
 
@@ -30,7 +26,9 @@ import {
     ClubDetailsContainer,
     VisibilityTitle,
     VisibilityContainer,
-    PickerContainer
+    PickerContainer,
+    RestModalContainer,
+    ContainerTest
 } from './styles'
 
 
@@ -44,10 +42,12 @@ import {
 // }
 
 
-export function HomeClubs() {
+
+export function HomeClubs({navigation}) {
 
     const [selectedValue, setSelectedValue] = useState("Python");
     const [modalVisible, setModalVisible] = useState(false);
+
 
     return (
         <Container>
@@ -60,6 +60,7 @@ export function HomeClubs() {
                 <ClubCardComponent
                     titleClub="React Life"
                     techCategory="Framework"
+                    onPress={() => navigation.navigate("ClubInside")}
                 />
                 <ClubCardComponent
                     titleClub="Freaking AI"
@@ -105,25 +106,26 @@ export function HomeClubs() {
 
                     </ModalHeader>
 
-                   
-                        <ModalTitle>Select Category</ModalTitle>
 
-                        <PickerContainer>
-                            <Picker
-                                selectedValue={selectedValue}
-                                itemStyle={{color: "#FFF", fontSize:18, fontWeight: '600', height: 150, width: 200}}
-                                style={{ height: 150, width: 200, }}
-                                onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
-                            >
-                                <Picker.Item label="Python" value="Python" />
-                                <Picker.Item label="JavaScript" value="js" />
-                                <Picker.Item label="C++" value="c++" />
-                                <Picker.Item label="IA" value="ia" />
-                                <Picker.Item label="React" value="react" />
-                            </Picker>
-                        </PickerContainer>
+                    <ModalTitle>Select Category</ModalTitle>
 
+                    <ContainerTest>
+                    <PickerContainer>
+                        <Picker
+                            selectedValue={selectedValue}
+                            itemStyle={{ color: "#FFF", fontSize: 18, fontWeight: '600', height: 150, width: 200 }}
+                            style={{ height: 150, width: 200, }}
+                            onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
+                        >
+                            <Picker.Item label="Python" value="Python" />
+                            <Picker.Item label="JavaScript" value="js" />
+                            <Picker.Item label="C++" value="c++" />
+                            <Picker.Item label="IA" value="ia" />
+                            <Picker.Item label="React" value="react" />
+                        </Picker>
+                    </PickerContainer>
 
+                    <RestModalContainer>
                         <ClubDetailsContainer>
                             <ClubTitle>The name of your new club</ClubTitle>
                             <NameClubInput
@@ -145,7 +147,11 @@ export function HomeClubs() {
                                 </Category>
                             </VisibilityContainer>
                         </CategoriesContainer>
-                    
+                        
+                        
+                    </RestModalContainer>
+                    </ContainerTest>
+
                 </ModalContainer>
             </Modal>
 

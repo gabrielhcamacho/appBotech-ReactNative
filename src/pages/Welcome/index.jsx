@@ -17,7 +17,7 @@ import {
 }from './styles'
 
 
-export function Welcome(){
+export function Welcome({navigation}){
     return(
         <Container>
             <Header>
@@ -27,7 +27,7 @@ export function Welcome(){
             <Slogan>The dev world in your hands</Slogan>
 
             <LoginWrapper>
-                <LoginOption>
+                <LoginOption onPress={() => navigation.navigate("HomeFeed")}>
                     <Icon name="apple1"/>
                     <TextLogin>Login with Apple</TextLogin>
                 </LoginOption>

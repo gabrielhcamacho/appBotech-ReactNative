@@ -64,7 +64,7 @@ export const RocketIcon = styled(MaterialCommunityIcons)`
     color: ${({theme}) => theme.colors.background};
 
     margin-left: 5px;
-`;
+`
 
 export const Text = styled.Text`
     color: ${({theme}) => theme.colors.text};
@@ -118,11 +118,14 @@ export const CategoryName = styled.Text`
 
 
 export const ClubTitle = styled.Text`
+    padding-left: ${RFValue(15)}px;
+    padding-right: ${RFValue(15)}px;
+    width: 100%;
+
     color: ${({theme}) => theme.colors.text};
-    font-size: ${RFValue(22)}px;
+    font-size: ${RFValue(20)}px;
     font-weight: 600;
 
-    margin-top: ${RFValue(125)}px;
     margin-bottom: ${RFValue(10)}px;
     text-align: center;
 `;
@@ -132,6 +135,7 @@ export const NameClubInput = styled.TextInput`
     font-size: ${RFValue(18)}px;
 
     align-items: center;
+    justify-content: center;
 
     padding: ${RFValue(12)}px ${RFValue(30)}px;
 
@@ -145,16 +149,14 @@ export const NameClubInput = styled.TextInput`
 export const ClubDetailsContainer = styled.View`
     padding-left: ${RFValue(30)}px;
     padding-right: ${RFValue(30)}px;
-    margin-top: 0px;
-
-    flex-direction: column;
+    margin-top: 50px;
 
     width: 100%;
 `;
 
 export const VisibilityTitle = styled.Text`
     color: ${({theme}) => theme.colors.text};
-    font-size: ${RFValue(22)}px;
+    font-size: ${RFValue(20)}px;
     font-weight: 600;
 
     margin-top: ${RFValue(20)}px;
@@ -184,4 +186,12 @@ export const PickerContainer = styled.View`
 
     height: 120px;
     width: 200px;
+`;
+
+export const RestModalContainer = styled.View`
+    
+`;
+
+export const ContainerTest = styled.View`
+
 `;

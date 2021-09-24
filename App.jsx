@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
-
+import { NavigationContainer, StackActions } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import {StatusBar} from 'react-native';
 import React from 'react';
@@ -15,10 +15,14 @@ import {
 
 } from '@expo-google-fonts/montserrat'
 
-import { Welcome } from './src/pages/Welcome';
-import {AppRoutes} from './src/routes/app.routes'
-import TopTabNavigator from './src/routes/TopBarNavigator'
 
+import {AppRoutes} from './src/routes/app.routes'
+import { Welcome } from './src/pages/Welcome';
+import { HomeFeed } from './src/pages/Home/HomeFeed';
+import { ClubInside } from './src/pages/ClubInside';
+import { HomeClubs } from './src/pages/Home/HomeClubs';
+
+const Stack = createStackNavigator();
 
 export default function App() {
   
@@ -34,6 +38,11 @@ export default function App() {
     <ThemeProvider theme={theme}>
 
       <NavigationContainer>
+        {/* <Stack.Navigator initialRoute="Welcome">
+          <Stack.Screen name="Welcome" component={Welcome} options={{headerShown: false}}/>
+          <Stack.Screen name="HomeFeed" component={HomeClubs}/>
+          <Stack.Screen name="ClubInside" component={ClubInside}/>
+        </Stack.Navigator> */}
         <AppRoutes/>
       </NavigationContainer>
 

@@ -8,6 +8,7 @@ import {useTheme} from 'styled-components'
 import { Ionicons } from '@expo/vector-icons';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
+import { createStackNavigator } from '@react-navigation/stack';
 
 import {Welcome} from '../pages/Welcome'
 import {HomeFeed} from '../pages/Home/HomeNav'
@@ -16,6 +17,7 @@ import {Explore} from '../pages/Explore'
 import {ClubInside} from '../pages/ClubInside'
 
 const {Navigator, Screen} = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
 export function AppRoutes(){
     const theme = useTheme();
@@ -85,8 +87,7 @@ export function AppRoutes(){
                     ))
                 }}
             />
-            
-
         </Navigator>
+        
     )
 }
