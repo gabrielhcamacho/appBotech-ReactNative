@@ -1,27 +1,40 @@
 import React from 'react';
-import {Platform} from 'react-native'
+import { Platform } from 'react-native'
 
-import {Entypo} from '@expo/vector-icons'
+import { Entypo } from '@expo/vector-icons'
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import {useTheme} from 'styled-components'
+import { useTheme } from 'styled-components'
 import { Ionicons } from '@expo/vector-icons';
 
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack';
 
-import {Welcome} from '../pages/Welcome'
-import {HomeFeed} from '../pages/Home/HomeNav'
-import {Profile} from '../pages/Profile'
-import {Explore} from '../pages/Explore'
-import {ClubInside} from '../pages/ClubInside'
 
-const {Navigator, Screen} = createBottomTabNavigator();
+import { Welcome } from '../pages/Welcome'
+import { HomeFeed } from '../pages/Home/HomeNav'
+import { Profile } from '../pages/Profile'
+import { Explore } from '../pages/Explore'
+import { ClubInside } from '../pages/ClubInside'
+import { HomeClubs } from '../pages/Home/HomeClubs';
+
+const { Navigator, Screen } = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
-export function AppRoutes(){
-    const theme = useTheme();
+function HomeClubStack() {
     return(
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="HomeFeed" component={HomeFeed} />
+        <Stack.Screen name="HomeClubs" component={HomeClubs} />
+        <Stack.Screen name="ClubInside" component={ClubInside} />
+    </Stack.Navigator>
+    )
+    
+}
+
+export function AppRoutes() {
+    const theme = useTheme();
+    return (
         <Navigator
             screenOptions={{
                 tabBarActiveTintColor: theme.colors.secondary,
@@ -32,15 +45,15 @@ export function AppRoutes(){
                     borderTopColor: theme.colors.background,
                     paddingVertical: Platform.OS === 'ios' ? 20 : 0,
                     height: 88,
-                  }
+                }
             }}
-            
+
         >
-            <Screen 
+            <Screen
                 name="Home"
-                component={HomeFeed}
+                component={HomeClubStack}
                 options={{
-                    tabBarIcon: (({size, color}) => (
+                    tabBarIcon: (({ size, color }) => (
                         <Entypo name="home"
                             size={size}
                             color={color}
@@ -48,12 +61,12 @@ export function AppRoutes(){
                     ))
                 }}
             />
-            
-            <Screen 
+
+            <Screen
                 name="Explore"
                 component={Explore}
                 options={{
-                    tabBarIcon: (({size, color}) => (
+                    tabBarIcon: (({ size, color }) => (
                         <MaterialCommunityIcons name="telescope"
                             size={size}
                             color={color}
@@ -62,24 +75,11 @@ export function AppRoutes(){
                 }}
             />
 
-            <Screen 
-                name="Club"
-                component={ClubInside}
-                options={{
-                    tabBarIcon: (({size, color}) => (
-                        <Ionicons name="ios-beer"
-                            size={size}
-                            color={color}
-                        />
-                    ))
-                }}
-            />
-
-            <Screen 
+            <Screen
                 name="Profile"
                 component={Profile}
                 options={{
-                    tabBarIcon: (({size, color}) => (
+                    tabBarIcon: (({ size, color }) => (
                         <AntDesign name="user"
                             size={size}
                             color={color}
@@ -88,6 +88,6 @@ export function AppRoutes(){
                 }}
             />
         </Navigator>
-        
+
     )
 }

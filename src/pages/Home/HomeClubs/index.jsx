@@ -5,6 +5,7 @@ import { FAB } from 'react-native-elements';
 
 
 import { ClubCardComponent } from '../../../components/ClubCard'
+import {useNavigation} from '@react-navigation/native'
 
 
 
@@ -32,22 +33,11 @@ import {
 } from './styles'
 
 
-// interface Props {
-//     titleClub: string;
-// }
-
-// interface SelectOption{
-//     isActive: boolean;
-//     optionLanguage: String;
-// }
-
-
-
-export function HomeClubs({navigation}) {
-
+export function HomeClubs() {
+    
     const [selectedValue, setSelectedValue] = useState("Python");
     const [modalVisible, setModalVisible] = useState(false);
-
+    const { navigate } = useNavigation();
 
     return (
         <Container>
@@ -60,8 +50,10 @@ export function HomeClubs({navigation}) {
                 <ClubCardComponent
                     titleClub="React Life"
                     techCategory="Framework"
-                    onPress={() => navigation.navigate("ClubInside")}
+                    onPress={() => navigate("ClubInside")}
                 />
+
+
                 <ClubCardComponent
                     titleClub="Freaking AI"
                     techCategory="Artificial Intelligence"

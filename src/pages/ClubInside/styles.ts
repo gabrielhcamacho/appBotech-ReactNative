@@ -51,7 +51,7 @@ export const MenuButtons = styled.View`
 `;
 
 export const JoinButton = styled.TouchableOpacity`
-    background-color: ${({theme}) => theme.colors.primary};
+    background-color: ${({theme}) => theme.colors.secondary};
     padding: ${RFValue(10)}px;
     border-radius: ${RFValue(5)}px;
 
@@ -65,9 +65,13 @@ export const TextButton = styled.Text`
 `;
 
 export const SeeChatButton = styled.TouchableOpacity`
-    background-color: ${({theme}) => theme.colors.primary};
+    background-color: ${({theme}) => theme.colors.secondary};
     padding: ${RFValue(10)}px;
     border-radius: ${RFValue(5)}px;
+    width: 130px;
+
+    align-items: center;
+    justify-content:center;
 
     margin-top: ${RFValue(10)}px;
 `;
