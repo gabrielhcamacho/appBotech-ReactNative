@@ -1,5 +1,8 @@
-import React from 'react';
-import { View, Text, StyleSheet} from 'react-native'
+import React, {useContext} from 'react';
+import {LoadAnimationP} from '../../components/LoadAnimationP'
+import {LogoAnimation} from '../../components/LogoAnimation'
+
+import { useAuth } from '../../hooks/Auth'
 
 import {
     Container,
@@ -18,13 +21,17 @@ import {
 
 
 export function Welcome({navigation}){
+
+    const { user } = useAuth();
+
     return(
         <Container>
             <Header>
-               <IconLogo name="beer"/> 
+                <LogoAnimation/>
                <Title>Botech</Title>
             </Header>
-            <Slogan>The dev world in your hands</Slogan>
+
+            <LoadAnimationP/>
 
             <LoginWrapper>
                 <LoginOption onPress={() => navigation.navigate("HomeFeed")}>

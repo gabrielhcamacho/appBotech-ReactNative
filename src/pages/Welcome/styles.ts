@@ -6,18 +6,18 @@ import {getStatusBarHeight} from 'react-native-iphone-x-helper'
 
 
 export const Container = styled.View`
-    /* flex: 1 makes the element take the whole screen, having total priority */
     flex: 1;
     background-color: ${({theme}) => theme.colors.background};
 `;
 
 export const Header = styled.View`
     width: 100%;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 
-
+    margin-top: ${RFValue(120)}px;
 `;
 
     export const Slogan = styled.Text`
@@ -37,9 +37,8 @@ export const Header = styled.View`
    export const Title = styled.Text`
         font-size: ${RFValue(35)}px;
         color: ${({theme}) => theme.colors.text};
-        font-family: ${({theme}) => theme.fonts.medium};
-        margin-top: ${RFValue(15)}px;
-        
+        font-weight: 500;
+        margin-top: ${RFValue(50)}px;
 
     `;
 
@@ -64,7 +63,7 @@ export const Header = styled.View`
     export const LoginWrapper = styled.View`
         width: 100%;
         align-items: center;
-        margin-top: ${RFValue(100)}px;
+        margin-bottom: ${RFValue(80)}px;
     `;
 
     export const LoginOption = styled.TouchableOpacity`
@@ -89,7 +88,7 @@ export const Header = styled.View`
     export const TextSignUp = styled.Text`
         color: ${({theme}) => theme.colors.text};
         font-size: ${RFValue(15)}px;
-        margin-top: ${RFValue(40)}px;
+        margin-top: ${RFValue(30)}px;
         justify-content: flex-start;
     `;
 

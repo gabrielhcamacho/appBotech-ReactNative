@@ -32,6 +32,7 @@ export function Profile() {
                     <UserName>@thegabrielcamacho</UserName>
                 </UserHeaderInfo>
             </Header>
+            
             <ScrollView
                 bounces={false}
                 showsVerticalScrollIndicator={false}>

@@ -17,9 +17,12 @@ import {
     ShareButton,
 } from './styles';
 
+interface Props{
+    textContent: string;
+    date: string;
+}
 
-
-export function PostCard(){
+export function PostCard({textContent, date}: Props){
     // let date = new Date();
     return(
         <Container>
@@ -35,13 +38,13 @@ export function PostCard(){
                 <UserName>Gabriel Camacho</UserName>
             </CardHeader>
             <CardBody>
-                <TextContent>O pai ta on e roteando!!</TextContent>
+                <TextContent>{textContent}</TextContent>
             </CardBody>
 
             <CardFooter>
                 <LikeButton name="like1"/>
                 <ShareButton name="repeat"/>
-                <PostDate>1 September 2021</PostDate>
+                <PostDate>{date}</PostDate>
             </CardFooter>
         </PostContainer>
 

@@ -2,6 +2,8 @@ import 'react-native-gesture-handler';
 import { NavigationContainer, StackActions } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+import {AuthProvider} from './src/hooks/Auth'
+
 import { StatusBar } from 'react-native';
 import React from 'react';
 import { ThemeProvider } from 'styled-components'
@@ -38,7 +40,11 @@ export default function App() {
     <ThemeProvider theme={theme}>
 
       <NavigationContainer>
-        <AppRoutes/>
+
+        <AuthProvider>
+          <Welcome/>
+        </AuthProvider>
+
       </NavigationContainer>
 
 

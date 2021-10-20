@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { FAB } from 'react-native-elements';
 import { FlatList, Modal, StyleSheet } from 'react-native'
-
-
 
 import {
     Container,
@@ -22,6 +20,25 @@ export function HomeFeed() {
 
     const [modalVisible, setModalVisible] = useState(false);
 
+
+    const [newPost, setNewPost] = useState('');
+    const [myPosts, setMyPosts] = useState([]);
+    const[date, setDate] = useState('')
+
+    function handleAddNewPost(){
+        setMyPosts(oldState => [...oldState, newPost])
+        setModalVisible(!modalVisible)
+    }
+
+    useEffect(() => {
+        const newDate = new Date();
+        const currentDay = newDate.getDate()
+        const currentMonth = newDate.toLocaleString('eg-IT', { month: 'long' })
+        const currentHour = newDate.getHours()+":"+newDate.getMinutes()+ 
+        " - "+currentDay+ " of "+ currentMonth;
+        setDate(currentHour)
+    }, [myPosts])
+
     const Posts = [
         {}, {}, {}
     ]
@@ -29,16 +46,19 @@ export function HomeFeed() {
 
     return (
 
-        
+       
         <Container>
+             {/* { myPosts.map(post =>( */}
             <FlatList
                 data={Posts}
                 renderItem={() => {
                     return (
-                        <PostCard />
+                        <PostCard textContent={myPosts} date={date}/>
                     )
                 }}
-            />
+              
+            /> 
+             {/* ))}  */}
             
             <FABWrapper>
                 
@@ -66,7 +86,8 @@ export function HomeFeed() {
                         <CancelButton onPress={() => setModalVisible(!modalVisible)}>
                             <Text>Cancel</Text>
                         </CancelButton>
-                        <SendButton>
+                        <SendButton onPress={handleAddNewPost}
+                        >
                             <Text>Send</Text>
                         </SendButton>
 
@@ -75,6 +96,7 @@ export function HomeFeed() {
                         placeholder="What's going on dev?"
                         multiline={true}
                         placeholderTextColor="#979797"
+                        onChangeText={setNewPost}
                     >
 
                     </ContentInput>
