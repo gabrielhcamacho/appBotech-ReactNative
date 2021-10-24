@@ -1,11 +1,12 @@
 {
   "expo": {
-    "name": "gofinances",
-    "slug": "gofinances",
+    "name": "botech",
+    "slug": "botech",
+    "schema": "botech",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
     ]
   },
-  "name": "gofinances"
+  "name": "botech"
 }

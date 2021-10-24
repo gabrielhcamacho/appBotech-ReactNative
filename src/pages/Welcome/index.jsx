@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import {LoadAnimationP} from '../../components/LoadAnimationP'
 import {LogoAnimation} from '../../components/LogoAnimation'
+import {Alert} from 'react-native'
 
 import { useAuth } from '../../hooks/Auth'
 
@@ -22,7 +23,17 @@ import {
 
 export function Welcome({navigation}){
 
-    const { user } = useAuth();
+    const { signInWithGoogle } = useAuth();
+
+    async function handleSignInWithGoogle(){
+        try {
+            await signInWithGoogle();
+
+        } catch (error) {
+            console.log(error);
+            Alert.alert('Unable to connect Google account')
+        }
+    }
 
     return(
         <Container>
@@ -39,7 +50,7 @@ export function Welcome({navigation}){
                     <TextLogin>Login with Apple</TextLogin>
                 </LoginOption>
 
-                <LoginOption>
+                <LoginOption onPress={handleSignInWithGoogle}>
                     <Icon name="google"/>
                     <TextLogin>Login with Google</TextLogin>
                 </LoginOption>

@@ -29,7 +29,7 @@ function HomeClubStack({navigation, route}) {
     }
     return(
     <Stack.Navigator initialRouteName="Welcome" screenOptions={{headerShown: false}}>
-        <Stack.Screen name="Welcome" component={Welcome} screenOptions={{tabBarVisible: false}}/>
+        {/* <Stack.Screen name="Welcome" component={Welcome} screenOptions={{tabBarVisible: false}}/> */}
         <Stack.Screen name="HomeFeed" component={HomeFeed} />
         <Stack.Screen name="HomeClubs" component={HomeClubs} />
         <Stack.Screen name="ClubInside" component={ClubInside} />

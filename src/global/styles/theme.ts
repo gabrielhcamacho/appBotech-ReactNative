@@ -23,6 +23,6 @@ export default{
     fonts:{
         regular: 'Montserrat_400Regular',
         medium: 'Poppins_500Medium',
-        // bold: 'Poppins_700Bold'
+        bold: 'Poppins_700Bold'
     }
 }
