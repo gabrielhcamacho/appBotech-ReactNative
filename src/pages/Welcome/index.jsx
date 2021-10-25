@@ -23,7 +23,7 @@ import {
 
 export function Welcome({navigation}){
 
-    const { signInWithGoogle } = useAuth();
+    const { signInWithGoogle, signInWithApple } = useAuth();
 
     async function handleSignInWithGoogle(){
         try {
@@ -32,6 +32,16 @@ export function Welcome({navigation}){
         } catch (error) {
             console.log(error);
             Alert.alert('Unable to connect Google account')
+        }
+    }
+
+    async function handleSignInWithApple(){
+        try {
+            await signInWithApple();
+
+        } catch (error) {
+            console.log(error);
+            Alert.alert('Unable to connect Apple account')
         }
     }
 
@@ -45,7 +55,7 @@ export function Welcome({navigation}){
             <LoadAnimationP/>
 
             <LoginWrapper>
-                <LoginOption onPress={() => navigation.navigate("HomeFeed")}>
+                <LoginOption onPress={handleSignInWithApple}>
                     <Icon name="apple1"/>
                     <TextLogin>Login with Apple</TextLogin>
                 </LoginOption>
