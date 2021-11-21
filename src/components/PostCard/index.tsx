@@ -38,7 +38,7 @@ export function PostCard({textContent, date}: Props){
                 <UserName>Gabriel Camacho</UserName>
             </CardHeader>
             <CardBody>
-                <TextContent>{textContent}</TextContent>
+                <TextContent>"Estamos on!!!"</TextContent>
             </CardBody>
 
             <CardFooter>
@@ -48,6 +48,50 @@ export function PostCard({textContent, date}: Props){
             </CardFooter>
         </PostContainer>
 
+        <PostContainer>
+            <CardHeader>
+            <Avatar
+                size="medium"
+                rounded
+                source={{
+                        uri:"https://avatars.githubusercontent.com/u/80973488?v=4"
+                        }}
+                        />
+                <UserName>Ariel</UserName>
+            </CardHeader>
+            <CardBody>
+                <TextContent>"Ow namoral investe aqui rapidão"</TextContent>
+            </CardBody>
+
+            <CardFooter>
+                <LikeButton name="like1"/>
+                <ShareButton name="repeat"/>
+                <PostDate>{date}</PostDate>
+            </CardFooter>
+        </PostContainer>
+
+        <PostContainer>
+            <CardHeader>
+            <Avatar
+                size="medium"
+                rounded
+                source={{
+                        uri:"https://avatars.githubusercontent.com/u/85971493?v=4"
+                        }}
+                        />
+                <UserName>Giovanna</UserName>
+            </CardHeader>
+            <CardBody>
+                <TextContent>"Alguem manja de C++?"</TextContent>
+            </CardBody>
+
+            <CardFooter>
+                <LikeButton name="like1"/>
+                <ShareButton name="repeat"/>
+                <PostDate>{date}</PostDate>
+            </CardFooter>
+        </PostContainer>
+        
         </Container>
     )
 }

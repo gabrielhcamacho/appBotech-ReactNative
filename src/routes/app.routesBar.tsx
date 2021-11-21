@@ -21,16 +21,10 @@ import { HomeClubs } from '../pages/Home/HomeClubs';
 const { Navigator, Screen } = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
-function HomeClubStack({navigation, route}) {
-    // if(route.state && route.state.index > 0){
-    //     navigation.setOptions({tabBarVisible: false})
-    // } else {
-    //     navigation.setOptions({tabBarVisible: true})
-    // }
-    navigation.setOptions({tabBarVisible: false})
+function HomeClubStack() {
     return(
-    <Stack.Navigator initialRouteName="Welcome" screenOptions={{headerShown: false}}>
-        <Stack.Screen name="Welcome" component={Welcome} screenOptions={{tabBarVisible: false}}/>
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Welcome" component={Welcome} />
         <Stack.Screen name="HomeFeed" component={HomeFeed} />
         <Stack.Screen name="HomeClubs" component={HomeClubs} />
         <Stack.Screen name="ClubInside" component={ClubInside} />

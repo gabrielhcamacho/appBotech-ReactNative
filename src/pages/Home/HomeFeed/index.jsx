@@ -40,7 +40,7 @@ export function HomeFeed() {
     }, [myPosts])
 
     const Posts = [
-        {}, {}, {}
+        {}, {}
     ]
 
 
@@ -53,12 +53,19 @@ export function HomeFeed() {
                 data={Posts}
                 renderItem={() => {
                     return (
-                        <PostCard textContent={myPosts} date={date}/>
+                        <PostCard date={date}/>
                     )
                 }}
               
             /> 
-             {/* ))}  */}
+            {/* <FlatList
+                data={Posts}
+                renderItem={() => {
+                    return (
+                        <PostCard />
+                    )
+                }}
+            /> */}
             
             <FABWrapper>
                 

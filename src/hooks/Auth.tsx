@@ -1,7 +1,7 @@
-import React, { createContext, ReactNode, useContext, useState} from 'react'
+import React, { createContext, ReactNode, useContext, useState, useEffect} from 'react'
 import * as AuthSession from 'expo-auth-session';
 import * as AppleAuthentication from 'expo-apple-authentication';
-import { AsyncStorage } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 interface AuthProviderProps{
     children: ReactNode;
@@ -33,6 +33,9 @@ const AuthContext = createContext({} as AuthContextData);
 function AuthProvider({ children }: AuthProviderProps){
 
     const [user, setUser] = useState<User>({} as User);
+    const [userStorageLoading, setUserStorageLoading] = useState(true)
+
+    const userStorageKey = '@botech:user'
 
     async function signInWithGoogle() {
         try {
@@ -58,7 +61,7 @@ function AuthProvider({ children }: AuthProviderProps){
             }
         
         } catch (err) {
-            throw new Error(err);
+            throw new Error(`${err}`);
         }
     }
 
@@ -83,14 +86,28 @@ function AuthProvider({ children }: AuthProviderProps){
 
 
             setUser(userLogged);
-            await AsyncStorage.setItem('@botech:user', JSON.stringify(userLogged));
+            await AsyncStorage.setItem(userStorageKey, JSON.stringify(userLogged));
             }
 
 
         } catch (error) {
-            throw new Error(error)
+            throw new Error(`${error}`)
         }
     }
+
+    useEffect(() => {
+        async function loadUserStorageData() {
+            const userStored = await AsyncStorage.getItem(userStorageKey)
+
+            if(userStored){
+                const userLogged = JSON.parse(userStored) as User;
+                setUser(userLogged);
+            }
+            setUserStorageLoading(false)
+        }
+       
+        loadUserStorageData()
+    },[])
 
     return(
         <AuthContext.Provider value={{

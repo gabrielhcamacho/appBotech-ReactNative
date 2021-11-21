@@ -20,7 +20,8 @@ import {
 
 import { AppRoutes } from './src/routes/app.routes'
 import { Welcome } from './src/pages/Welcome';
-import {Routes} from './src/routes'
+import {Routes} from './src/routes';
+import {HomeFeed} from './src/pages/Home/HomeFeed';
 
 
 const Stack = createStackNavigator();
@@ -42,16 +43,18 @@ export default function App() {
       {/* <NavigationContainer> */}
 
         <AuthProvider>
-          {/* <AppRoutes/> */}
+         
           {/* <Welcome/> */}
           <Routes/>
+          {/* <HomeFeed/> */}
+         
         </AuthProvider>
 
       {/* </NavigationContainer> */}
 
 
       <StatusBar barStyle="light-content" />
-      {/* <Welcome/> */}
+
     </ThemeProvider>
   );
 }

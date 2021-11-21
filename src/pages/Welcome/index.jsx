@@ -3,6 +3,7 @@ import {LoadAnimationP} from '../../components/LoadAnimationP'
 import {LogoAnimation} from '../../components/LogoAnimation'
 import {Alert} from 'react-native'
 
+import {useNavigation} from '@react-navigation/native'
 import { useAuth } from '../../hooks/Auth'
 
 import {
@@ -22,6 +23,8 @@ import {
 
 
 export function Welcome({navigation}){
+
+    const {navigate} = useNavigation()
 
     const { signInWithGoogle, signInWithApple } = useAuth();
 
@@ -60,7 +63,7 @@ export function Welcome({navigation}){
                     <TextLogin>Login with Apple</TextLogin>
                 </LoginOption>
 
-                <LoginOption onPress={handleSignInWithGoogle}>
+                <LoginOption onPress={() => navigate('HomeFeed')}>
                     <Icon name="google"/>
                     <TextLogin>Login with Google</TextLogin>
                 </LoginOption>

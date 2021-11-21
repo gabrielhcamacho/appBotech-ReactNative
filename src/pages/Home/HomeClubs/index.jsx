@@ -109,11 +109,22 @@ export function HomeClubs() {
                             style={{ height: 150, width: 200, }}
                             onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
                         >
-                            <Picker.Item label="Python" value="Python" />
-                            <Picker.Item label="JavaScript" value="js" />
+                            <Picker.Item label="Python" value="Python"/>
+                            <Picker.Item label="JavaScript" value="js"/>
+                            <Picker.Item label="Java" value="java"/>
+                            <Picker.Item label="C" value="c"/>
                             <Picker.Item label="C++" value="c++" />
+                            <Picker.Item label="C#" value="c#" />
+                            <Picker.Item label="Ruby" value="ruby"/>
+                            <Picker.Item label="C" value="c"/>
+                            <Picker.Item label=".NET" value="net" />
+                            <Picker.Item label="Angular" value="angular" />
                             <Picker.Item label="IA" value="ia" />
                             <Picker.Item label="React" value="react" />
+                            <Picker.Item label="ReactNative" value="rn" />
+                            <Picker.Item label="Flutter" value="flutter"/>
+                            <Picker.Item label="Ionic" value="ionic" />
+                            <Picker.Item label="Flask" value="flask" />
                         </Picker>
                     </PickerContainer>
 
